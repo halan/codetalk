@@ -4,7 +4,7 @@
   "description": "A simple and smart platform to make great talks",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "keynote",
