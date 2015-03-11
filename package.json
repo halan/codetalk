@@ -2,9 +2,9 @@
   "name": "codetalk",
   "version": "0.0.0",
   "description": "A simple and smart platform to make great talks",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "keywords": [
     "keynote",
