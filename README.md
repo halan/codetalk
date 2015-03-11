@@ -1,9 +1,9 @@
-= CodeTalk
+# CodeTalk
 
-== Install
+## Install
 
 `npm install`
 
-== Run
+## Run
 
 node start`
