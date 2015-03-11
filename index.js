@@ -2,7 +2,8 @@ var http = require('http'),
   express = require('express'),
   io = require('socket.io'),
   pty = require('pty.js'),
-  terminal = require('term.js');
+  terminal = require('term.js'),
+  open = require('open');
 
 var app = express(),
   server = http.createServer(app),
@@ -17,6 +18,9 @@ io.sockets.on('connection', function(socket) {
   socket.on('data', function(data) { term.write(data); });
 });
 
-server.listen(8080, 'localhost', function(){
+app.set('port', process.env.PORT || 8080);
+server.listen(app.get('port'), 'localhost', function(){
   console.log('Ready! 👍')
+  console.log('listening port '+app.get('port'));
+  open('http://localhost:'+app.get('port'));
 });
